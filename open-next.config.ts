@@ -8,14 +8,8 @@ const config: OpenNextConfig = {
       proxyExternalRequest: "fetch",
     },
   },
-  middleware: {
-    external: true,
-    override: {
-      wrapper: "cloudflare-edge",
-      converter: "edge",
-      proxyExternalRequest: "fetch",
-    },
-  },
+  // 必须显式包含这个字段
+  edgeExternals: [], 
 };
 
 export default config;
