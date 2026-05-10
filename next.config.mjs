@@ -8,6 +8,7 @@ console.log("[Next] build with chunk: ", !disableChunk);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone', // 保持你现在的设置，或者改为 'export'（如果是全静态）
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
